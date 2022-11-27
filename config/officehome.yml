@@ -1,0 +1,33 @@
+dataset_dir: '/data/weili/Dataset'
+src_file: './OfficeHome/Real_World_RS.txt'
+tgt_file: './OfficeHome/Product_UT.txt'
+tgt_file_eval: './OfficeHome/Product_UT.txt'
+
+class_num: 65
+feature_size: 2048
+bottleneck_dim: 2048
+srcweight: 2
+
+max_iter: 10000
+batch_size: 40
+
+source_sample_mode: True
+n_way: 40
+k_shot: 1
+mask_classifier: False
+mask_divergence: False
+normalize_features: False
+align_loss: True
+align_weight: 0.5
+align_decay_rate: 0.3
+moving_centroid: True
+pat_weight: 0.1
+threshold_prob: 0.7
+
+
+gpu: 'cuda:1'
+max_loop: 5
+test_interval: 50
+output: './log.txt'
+
+

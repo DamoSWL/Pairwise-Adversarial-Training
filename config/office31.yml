@@ -1,0 +1,33 @@
+dataset_dir: '/data/weili/Dataset'
+src_file: './Office31/amazon_RS.txt'
+tgt_file: './Office31/dslr_UT.txt'
+tgt_file_eval: './Office31/dslr_UT.txt'
+
+class_num: 31
+feature_size: 1024
+bottleneck_dim: 1024
+srcweight: 4
+
+max_iter: 6000
+batch_size: 31
+
+source_sample_mode: True
+n_way: 31
+k_shot: 1
+mask_classifier: False
+mask_divergence: False
+normalize_features: False
+align_loss: True
+align_weight: 0.5
+align_decay_rate: 0.3
+moving_centroid: True
+pat_weight: 0.05
+threshold_prob: 0.7
+
+
+gpu: 'cuda:0'
+max_loop: 5
+test_interval: 50
+output: './log.txt'
+
+
